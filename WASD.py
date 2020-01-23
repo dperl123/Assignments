@@ -7,6 +7,9 @@ red = (255, 0, 0)
 green = (0, 255, 0)
 blue = (0, 0, 255)
 colorList = [black, red, green, blue]
+x = random.randint(0,255)
+y = random.randint(0,255)
+z = random.randint(0,255)
 moveLeft = False
 moveRight = False
 moveUp = False
@@ -42,19 +45,31 @@ while True:
     if moveUp == True:
         player[1] -= movementSpeed
         if player[1] < 0:
+            x = random.randint(0, 255)
+            y = random.randint(0, 255)
+            z = random.randint(0, 255)
             player[1] = 500
     if moveDown == True:
         player[1] += movementSpeed
         if player[1] > 500:
+            x = random.randint(0, 255)
+            y = random.randint(0, 255)
+            z = random.randint(0, 255)
             player[1] = 0
     if moveLeft == True:
         player[0] -= movementSpeed
         if player[0] < 0:
+            x = random.randint(0, 255)
+            y = random.randint(0, 255)
+            z = random.randint(0, 255)
             player[0] = 500
     if moveRight == True:
         player[0] += movementSpeed
         if player[0] > 500:
+            x = random.randint(0, 255)
+            y = random.randint(0, 255)
+            z = random.randint(0, 255)
             player[0] = 0
-    pygame.draw.circle(window, green, player, 30)
+    pygame.draw.circle(window, (x, y, z), player, 30)
     pygame.display.update()
     time.sleep(1/60)
