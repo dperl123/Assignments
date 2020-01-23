@@ -19,10 +19,12 @@ downLeft = 'downleft'
 downRight = 'downright'
 upLeft = 'upleft'
 upRight = 'upright'
-
-colors = random.choice(colorList)
+x = random.randint(0, 255)
+y = random.randint(0, 255)
+z = random.randint(0, 255)
+# colors = random.choice(colorList)
 movementSpeed = 4
-Rectangle = {'rect':pygame.Rect(230, 120, 50, 50), 'color': colors, 'dir':downRight}
+Rectangle = {'rect':pygame.Rect(230, 120, 50, 50), 'color':(x, y, z), 'dir':downRight}
 box = [Rectangle]
 
 while True:
@@ -46,28 +48,28 @@ while True:
             b['rect'].left += movementSpeed
             b['rect'].top -= movementSpeed
         if b['rect'].right > 400:
-            b['color'] = random.choice(colorList)
+            b['color'] = (random.randint(0,255), random.randint(0,255), random.randint(0,255))
             if b['dir'] == upRight:
                 b['dir'] = downLeft
             if b['dir'] == downRight:
                 b['dir'] = upLeft
 
         if b['rect'].bottom > 600:
-            b['color'] = random.choice(colorList)
+            b['color'] = (random.randint(0,255), random.randint(0,255), random.randint(0,255))
             if b['dir'] == downLeft:
                 b['dir'] = upRight
             if b['dir'] == downRight:
                 b['dir'] = upLeft
 
         if b['rect'].top < 0:
-            b['color'] = random.choice(colorList)
+            b['color'] = (random.randint(0,255), random.randint(0,255), random.randint(0,255))
             if b['dir'] == upLeft:
                 b['dir'] = downLeft
             if b['dir'] == upRight:
                 b['dir'] = downRight
 
         if b['rect'].left < 0:
-            b['color'] = random.choice(colorList)
+            b['color'] = (random.randint(0,255), random.randint(0,255), random.randint(0,255))
             if b['dir'] == downLeft:
                 b['dir'] = downRight
             if b['dir'] == upLeft:
