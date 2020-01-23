@@ -72,4 +72,4 @@ while True:
             player[0] = 0
     pygame.draw.circle(window, (x, y, z), player, 30)
     pygame.display.update()
-    time.sleep(1/30)
+    time.sleep(1/60)
