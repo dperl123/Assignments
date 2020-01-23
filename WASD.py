@@ -44,32 +44,32 @@ while True:
             moveRight = False
     if moveUp == True:
         player[1] -= movementSpeed
-        if player[1] < 0:
+        if player[1] + 30 < 0:
             x = random.randint(0, 255)
             y = random.randint(0, 255)
             z = random.randint(0, 255)
             player[1] = 500
     if moveDown == True:
         player[1] += movementSpeed
-        if player[1] > 500:
+        if player[1] - 30 > 500:
             x = random.randint(0, 255)
             y = random.randint(0, 255)
             z = random.randint(0, 255)
             player[1] = 0
     if moveLeft == True:
         player[0] -= movementSpeed
-        if player[0] < 0:
+        if player[0] + 30 < 0:
             x = random.randint(0, 255)
             y = random.randint(0, 255)
             z = random.randint(0, 255)
             player[0] = 500
     if moveRight == True:
         player[0] += movementSpeed
-        if player[0] > 500:
+        if player[0] - 30 > 500:
             x = random.randint(0, 255)
             y = random.randint(0, 255)
             z = random.randint(0, 255)
             player[0] = 0
     pygame.draw.circle(window, (x, y, z), player, 30)
     pygame.display.update()
-    time.sleep(1/60)
+    time.sleep(1/30)
