@@ -74,6 +74,19 @@ while True:
                 b['dir'] = downRight
             if b['dir'] == upLeft:
                 b['dir'] = upRight
+        if
+        # qwer = '{}'
+        # gj = qwer.format(player1Score)
+        # qwrt = '{}'
+        # gh = qwrt.format(player2Score)
+        # text1 = basicFont.render(gj, True, white, black)
+        # text2 = basicFont.render(gh, True, white, black)
+        # text1Rect = text1.get_rect()
+        # text2Rect = text2.get_rect()
+        # text1Rect.centerx = windowSurface.get_rect().width - 50
+        # text1Rect.centery = windowSurface.get_rect().height - 550
+        # text2Rect.centerx = windowSurface.get_rect().width - 650
+        # text2Rect.centery = windowSurface.get_rect().height - 550
         pygame.draw.rect(window, b['color'], b['rect'])
 
     pygame.display.update()
