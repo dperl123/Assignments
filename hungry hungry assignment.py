@@ -51,6 +51,7 @@ foodImage = pygame.image.load('dumplings.jpg')
 width = 800
 height = 800
 windowSurface = pygame.display.set_mode((width, height), 0, 32)
+windowSurface.fill(white)
 pygame.display.set_caption('Hungry Hungry Pygame')
 
 while True:
