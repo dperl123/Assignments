@@ -1,6 +1,7 @@
 import pygame, sys, time, random
 from pygame.locals import *
 pygame.init()
+p = 2
 black = (0,0,0)
 white = (255, 255, 255)
 red = (255, 0, 0)
@@ -91,3 +92,4 @@ while True:
 
     pygame.display.update()
     time.sleep(1/30)
+
